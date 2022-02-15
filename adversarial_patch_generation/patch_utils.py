@@ -253,7 +253,7 @@ def test_patch(patch_type, target, patch, test_loader, model):
     test_total, test_actual_total, test_success = 0, 1, 0
     k = 0
     for (image, label) in test_loader:
-        print("label is:", label)
+        print("original label is:", label)
         test_total += label.shape[0]
         assert image.shape[0] == 1, 'Only one picture should be loaded each time.'
         image = image.cuda()
